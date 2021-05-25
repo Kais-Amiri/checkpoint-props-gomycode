@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ProfileComponent from "./profile/ProfileComponent";
+import { myinfo } from "./profile/myInformations";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: "flex", justifyContent: "center", marginTop: "5%" }}>
+      <ProfileComponent myinfo={myinfo}>
+        <img
+          src="http://www.collegedomigban.org/public/img/avatars.png"
+          alt="photo de profile"
+          style={{ width: "40%", height: "70%", padding: "0 5% 0 2%" }}
+        />
+      </ProfileComponent>
     </div>
   );
 }
