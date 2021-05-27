@@ -49,9 +49,10 @@ function ProfileComponent({
             borderRadius: "1rem",
             padding: "3% 8%",
             cursor: "pointer",
+            color: "#00468B",
           }}
         >
-          Diplay Profile Name
+          Display Profile Name
         </button>
       </div>
     </div>
