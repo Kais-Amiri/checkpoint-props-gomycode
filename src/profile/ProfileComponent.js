@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function ProfileComponent({
   myinfo: { name, lastName, profession, phoneNumber, adress, bio },
+  myFunction,
   children,
 }) {
   return (
@@ -39,9 +41,38 @@ function ProfileComponent({
         <p>
           <b>Bio:</b> {bio}
         </p>
+        <button
+          onClick={() => myFunction(name)}
+          style={{
+            backgroundColor: "white",
+            border: "1px solid green",
+            borderRadius: "1rem",
+            padding: "3% 8%",
+            cursor: "pointer",
+          }}
+        >
+          Diplay Profile Name
+        </button>
       </div>
     </div>
   );
 }
+
+ProfileComponent.defaultProps = {
+  myinfo: {
+    name: "undefined",
+    lastName: "undefined",
+    profession: "undefined",
+    phoneNumber: "undefined",
+    adress: "undefined",
+    bio: "undefined",
+  },
+  myFunction: () => {
+    alert("The function doesn't exist");
+  },
+};
+ProfileComponent.propTypes = {
+  myinfo: PropTypes.objectOf(PropTypes.string),
+};
 
 export default ProfileComponent;
