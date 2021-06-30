@@ -13,7 +13,7 @@ function App() {
         <img
           src="http://www.collegedomigban.org/public/img/avatars.png"
           alt="photo de profile"
-          style={{ width: "40%", height: "70%", padding: "0 5% 0 2%" }}
+          style={{ width: "41%", height: "70%", padding: "0 5% 0 2%" }}
         />
       </ProfileComponent>
     </div>
